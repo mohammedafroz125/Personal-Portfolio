@@ -5,8 +5,8 @@ import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center pt-0">
-      <div className="container mx-auto px-20">
+    <section id="hero" className="min-h-screen flex items-center pt-24 md:pt-28">
+      <div className="container mx-auto px-4 md:px-8 lg:px-20">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-4 animate-fade-in-up">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
