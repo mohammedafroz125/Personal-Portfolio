@@ -35,22 +35,22 @@ const Hero = () => {
               </Link>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 pt-8">
-              <div className="flex items-center gap-3 text-muted-foreground">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 pt-6 sm:pt-8">
+              <div className="flex items-start sm:items-center gap-3 text-muted-foreground">
                 <Github className="w-5 h-5" />
-                <a href="https://github.com/mohammedafroz125" className="text-sm">github.com/mohammedafroz125</a>
+                <a href="https://github.com/mohammedafroz125" className="text-sm break-all">github.com/mohammedafroz125</a>
               </div>
-              <div className="flex items-center gap-3 text-muted-foreground">
+              <div className="flex items-start sm:items-center gap-3 text-muted-foreground">
                 <Linkedin className="w-5 h-5" />
-                <a href="https://www.linkedin.com/in/mohammed-afroz-7a27b0245/" className="text-sm">linkedin.com/in/mohammedafroz</a>
+                <a href="https://www.linkedin.com/in/mohammed-afroz-7a27b0245/" className="text-sm break-all">linkedin.com/in/mohammedafroz</a>
               </div>
-              <div className="flex items-center gap-3 text-muted-foreground">
+              <div className="flex items-start sm:items-center gap-3 text-muted-foreground">
                 <Mail className="w-5 h-5" />
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mohammedafroz45654@gmail.com" className="text-sm">mohammedafroz45654gmail.com</a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mohammedafroz45654@gmail.com" className="text-sm break-all">mohammedafroz45654gmail.com</a>
               </div>
-              <div className="flex items-center gap-3 text-muted-foreground">
+              <div className="flex items-start sm:items-center gap-3 text-muted-foreground">
                 <Phone className="w-5 h-5" />
-                <a href="tel:+919502509455" className="text-sm">+91 9502509455</a>
+                <a href="tel:+919502509455" className="text-sm break-all">+91 9502509455</a>
               </div>
             </div>
           </div>
