@@ -5,7 +5,10 @@ import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center pt-24 md:pt-28">
+    <section
+      id="hero"
+      className="min-h-[calc(100vh-var(--nav-h,64px))] flex items-center pt-[var(--nav-h,64px)]"
+    >
       <div className="container mx-auto px-4 md:px-8 lg:px-20">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-4 animate-fade-in-up">
