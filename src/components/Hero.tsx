@@ -37,10 +37,9 @@ const Hero = () => {
               {name.split("").map((letter, index) => (
                 <span
                   key={index}
-                  className="inline-block"
+                  className="inline-block animate-slide-in-left"
                   style={{
-                    animation: `slide-in-left 0.5s ease-out ${index * 0.05}s forwards`,
-                    opacity: 0,
+                    animationDelay: `${index * 0.05}s`,
                   }}
                 >
                   {letter === " " ? "\u00A0" : letter}
@@ -53,10 +52,9 @@ const Hero = () => {
               {titles.map((title, index) => (
                 <span
                   key={index}
-                  className="inline-block"
+                  className="inline-block animate-fade-in-up-delayed"
                   style={{
-                    animation: `fade-in-up-delayed 0.6s ease-out ${1.2 + index * 0.2}s forwards`,
-                    opacity: 0,
+                    animationDelay: `${1.2 + index * 0.2}s`,
                   }}
                 >
                   {title}
@@ -69,10 +67,9 @@ const Hero = () => {
 
             {/* Tagline with graceful fade-in */}
             <p
-              className="text-lg text-muted-foreground leading-relaxed"
+              className="text-lg text-muted-foreground leading-relaxed animate-fade-in"
               style={{
-                animation: `fade-in 1s ease-out 2s forwards`,
-                opacity: 0,
+                animationDelay: "2s",
               }}
             >
               Passionate about creating dynamic, responsive web applications. 
@@ -82,10 +79,9 @@ const Hero = () => {
 
             {/* Buttons */}
             <div
-              className="flex flex-wrap gap-4 pt-4"
+              className="flex flex-wrap gap-4 pt-4 animate-fade-in-up-delayed"
               style={{
-                animation: `fade-in-up-delayed 0.6s ease-out 2.5s forwards`,
-                opacity: 0,
+                animationDelay: "2.5s",
               }}
             >
               <Link to="projects" smooth={true} duration={500} offset={-80}>
@@ -112,10 +108,9 @@ const Hero = () => {
             {/* Social icons and contact info with staggered slide-up */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 pt-6 sm:pt-8">
               <div
-                className="flex items-start sm:items-center gap-3 text-muted-foreground"
+                className="flex items-start sm:items-center gap-3 text-muted-foreground animate-slide-up-from-bottom"
                 style={{
-                  animation: `slide-up-from-bottom 0.6s ease-out 3s forwards`,
-                  opacity: 0,
+                  animationDelay: "3s",
                 }}
               >
                 <Github className="w-5 h-5" />
@@ -127,10 +122,9 @@ const Hero = () => {
                 </a>
               </div>
               <div
-                className="flex items-start sm:items-center gap-3 text-muted-foreground"
+                className="flex items-start sm:items-center gap-3 text-muted-foreground animate-slide-up-from-bottom"
                 style={{
-                  animation: `slide-up-from-bottom 0.6s ease-out 3.2s forwards`,
-                  opacity: 0,
+                  animationDelay: "3.2s",
                 }}
               >
                 <Linkedin className="w-5 h-5" />
@@ -142,10 +136,9 @@ const Hero = () => {
                 </a>
               </div>
               <div
-                className="flex items-start sm:items-center gap-3 text-muted-foreground"
+                className="flex items-start sm:items-center gap-3 text-muted-foreground animate-slide-up-from-bottom"
                 style={{
-                  animation: `slide-up-from-bottom 0.6s ease-out 3.4s forwards`,
-                  opacity: 0,
+                  animationDelay: "3.4s",
                 }}
               >
                 <Mail className="w-5 h-5" />
@@ -157,10 +150,9 @@ const Hero = () => {
                 </a>
               </div>
               <div
-                className="flex items-start sm:items-center gap-3 text-muted-foreground"
+                className="flex items-start sm:items-center gap-3 text-muted-foreground animate-slide-up-from-bottom"
                 style={{
-                  animation: `slide-up-from-bottom 0.6s ease-out 3.6s forwards`,
-                  opacity: 0,
+                  animationDelay: "3.6s",
                 }}
               >
                 <Phone className="w-5 h-5" />
