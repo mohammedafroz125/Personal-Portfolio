@@ -166,10 +166,21 @@ const Hero = () => {
           </div>
 
           {/* Image with parallax, zoom, and rotation */}
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center w-full lg:justify-center">
             <div className="relative" ref={imageRef}>
+              {/* Very light blurry shadow background */}
+              <div 
+                className="absolute inset-0 rounded-full blur-3xl opacity-30"
+                style={{
+                  width: '120%',
+                  height: '120%',
+                  top: '-10%',
+                  left: '-10%',
+                  background: 'radial-gradient(circle, rgba(0, 0, 0, 0.15) 0%, transparent 70%)',
+                }}
+              ></div>
               <div
-                className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden animate-image-zoom-in"
+                className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden"
                 style={{
                   transform: `translate(${mousePosition.x * 0.1}px, ${mousePosition.y * 0.1}px) rotate(${-mousePosition.x * 0.05}deg)`,
                   transition: "transform 0.1s ease-out",
@@ -180,6 +191,7 @@ const Hero = () => {
                   src={profileImage}
                   alt="Mohammed Afroz"
                   className="w-full h-full object-cover"
+                  style={{ transform: 'scale(1)' }}
                 />
               </div>
             </div>
