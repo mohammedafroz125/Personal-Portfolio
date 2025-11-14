@@ -92,7 +92,7 @@ const Hero = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="gap-2 border-2 border-orange-500 bg-transparent hover:bg-orange-500/10 text-foreground transition-all duration-300 animate-glow-pulse"
+                  className="gap-2 border-2 border-orange-500 bg-transparent hover:bg-orange-500/10 text-foreground transition-all duration-300 animate-glow-pulse hover:shadow-[0_0_20px_rgba(234,88,12,0.6)] hover:shadow-orange-600/50"
                 >
                   View My Work
                   <ExternalLink className="w-4 h-4" />
@@ -102,7 +102,7 @@ const Hero = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-foreground/40 hover:border-foreground/80 hover:scale-105 hover:shadow-lg transition-all duration-300"
+                  className="border-2 border-foreground/40 hover:border-[#ea580c] hover:scale-105 transition-all duration-300 hover:shadow-[0_0_20px_rgba(234,88,12,0.6)] hover:shadow-orange-600/50"
                 >
                   Get In Touch
                 </Button>
