@@ -96,7 +96,7 @@ const FullPage: React.FC = () => {
                 <div className="grid md:grid-cols-2 gap-7 items-center py-10">
                     <div 
                         className="p-7 bg-white/70 border rounded-[20px] shadow-lg"
-                        style={{ background: `linear-gradient(180deg, #fff, #fff7fa)`, borderColor: BORDER_COLOR }}
+                        style={{ background: `linear-gradient(180deg, #FFFFFF, #fff7fa)`, borderColor: BORDER_COLOR }}
                     >
                         <h1 className="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-3">
                             Premium Hyderabadi & Pakistani Ethnic Wear
@@ -111,7 +111,7 @@ const FullPage: React.FC = () => {
                             style={{ 
                                 borderColor: ACCENT_GOLD,
                                 border: '1px solid',
-                                background: 'linear-gradient(180deg, #fff, #fff5ea)',
+                                background: 'linear-gradient(180deg, #FFFFFF, #fff5ea)',
                                 boxShadow: CARD_SHADOW
                             }}
                         >
