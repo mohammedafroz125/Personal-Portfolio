@@ -36,26 +36,14 @@ const Hero = () => {
       <div className="container mx-auto px-4 md:px-8 lg:px-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-3 md:space-y-4">
-            {/* Name with letter-by-letter animation */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-              {name.split(" ").map((word, wordIndex) => (
-                <span key={wordIndex} className="inline-block mr-2">
-                  {word.split("").map((letter, letterIndex) => {
-                    const globalIndex = name.split(" ").slice(0, wordIndex).join(" ").length + letterIndex + wordIndex;
-                    return (
-                      <span
-                        key={letterIndex}
-                        className="inline-block animate-slide-in-left"
-                        style={{
-                          animationDelay: `${globalIndex * 0.05}s`,
-                        }}
-                      >
-                        {letter}
-                      </span>
-                    );
-                  })}
-                </span>
-              ))}
+            {/* Name with fade-in and slide-up animation */}
+            <h1 
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight animate-fade-in-up-delayed"
+              style={{
+                animationDelay: "0.3s",
+              }}
+            >
+              {name}
             </h1>
 
             {/* Titles with staggered fade-in and slide-up */}

@@ -49,9 +49,9 @@ const Projects = () => {
     },
     {
       title: "StyledByNazima",
-      subtitle: "Clothing Brand Website",
+      subtitle: "Clothing Brand Landing Page",
       description:
-        "A static responsive website designed for a premium ethnic wear brand. Built with elegant typography, modern layouts, and professional design principles.",
+        "A responsive landing page designed for a premium ethnic wear brand. Built with elegant typography, modern layouts, and professional design principles.",
       features: [
         "Responsive design across all devices",
         "Clean UI with proper spacing",
