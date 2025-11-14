@@ -32,7 +32,7 @@ const FullPage: React.FC = () => {
     // Helper component for the decorative header frame style (using Tailwind and inline style)
     const HeaderFrame: React.FC<{ children: React.ReactNode }> = ({ children }) => (
         <div 
-            className="relative p-8 md:p-6 mb-4 border rounded-[28px] shadow-lg"
+            className="relative p-4 sm:p-6 md:p-8 mb-4 border rounded-[28px] shadow-lg overflow-hidden"
             style={{
                 borderColor: 'rgba(197,168,128,.35)',
                 boxShadow: CARD_SHADOW,
@@ -68,7 +68,7 @@ const FullPage: React.FC = () => {
         <div className="bg-white text-gray-900 font-['Inter'] min-h-screen">
             <header className="max-w-7xl mx-auto px-6">
                 <HeaderFrame>
-                    <div className="text-center font-['Great_Vibes'] text-6xl md:text-7xl tracking-wider">
+                    <div className="text-center font-['Great_Vibes'] text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-wider break-words overflow-hidden px-2">
                         StyledByNazima
                     </div>
                     <div 

@@ -110,3 +110,33 @@ All colors MUST be HSL.
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer utilities {
+  /* Hero Section Button Styles */
+  #hero button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  #hero button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(234, 88, 12, 0.1), transparent);
+    transition: left 0.5s;
+  }
+
+  #hero button:hover::before {
+    left: 100%;
+  }
+
+  /* Orange glow effect for Hero buttons on hover */
+  #hero button:hover {
+    box-shadow: 0 0 20px rgba(234, 88, 12, 0.6), 0 0 40px rgba(234, 88, 12, 0.3);
+    transform: translateY(-2px);
+  }
+}
