@@ -37,16 +37,23 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-4">
             {/* Name with letter-by-letter animation */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              {name.split("").map((letter, index) => (
-                <span
-                  key={index}
-                  className="inline-block animate-slide-in-left"
-                  style={{
-                    animationDelay: `${index * 0.05}s`,
-                  }}
-                >
-                  {letter === " " ? "\u00A0" : letter}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+              {name.split(" ").map((word, wordIndex) => (
+                <span key={wordIndex} className="inline-block mr-2">
+                  {word.split("").map((letter, letterIndex) => {
+                    const globalIndex = name.split(" ").slice(0, wordIndex).join(" ").length + letterIndex + wordIndex;
+                    return (
+                      <span
+                        key={letterIndex}
+                        className="inline-block animate-slide-in-left"
+                        style={{
+                          animationDelay: `${globalIndex * 0.05}s`,
+                        }}
+                      >
+                        {letter}
+                      </span>
+                    );
+                  })}
                 </span>
               ))}
             </h1>
@@ -102,7 +109,7 @@ const Hero = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-foreground/40 hover:border-[#ea580c] hover:scale-105 transition-all duration-300 hover:shadow-[0_0_20px_rgba(234,88,12,0.6)] hover:shadow-orange-600/50"
+                  className="border-2 border-orange-500 bg-transparent hover:bg-orange-500/10 hover:border-[#ea580c] hover:scale-105 transition-all duration-300 hover:shadow-[0_0_20px_rgba(234,88,12,0.6)] hover:shadow-orange-600/50"
                 >
                   Get In Touch
                 </Button>
