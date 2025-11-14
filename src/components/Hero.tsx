@@ -166,13 +166,14 @@ const Hero = () => {
           </div>
 
           {/* Image with parallax, zoom, and rotation */}
-          <div className="flex justify-center lg:justify-end">
+          <div className="flex justify-center items-center">
             <div className="relative" ref={imageRef}>
               <div
-                className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl ring-8 ring-accent animate-image-zoom-in"
+                className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden animate-image-zoom-in"
                 style={{
                   transform: `translate(${mousePosition.x * 0.1}px, ${mousePosition.y * 0.1}px) rotate(${-mousePosition.x * 0.05}deg)`,
                   transition: "transform 0.1s ease-out",
+                  boxShadow: "0 0 0 8px rgba(247, 245, 243, 0.8), 0 10px 40px rgba(0, 0, 0, 0.1)",
                 }}
               >
                 <img
@@ -181,7 +182,6 @@ const Hero = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary rounded-full -z-10 blur-2xl opacity-50"></div>
             </div>
           </div>
         </div>
