@@ -32,8 +32,14 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center pt-16 md:pt-20 pb-12 overflow-hidden">
-      <div className="container mx-auto px-4 md:px-8 lg:px-20">
+    <section id="hero" className="min-h-screen flex items-center justify-center pt-16 md:pt-20 pb-12 overflow-hidden relative">
+      {/* Subtle orange gradient background */}
+      <div className="absolute inset-0 -z-10 opacity-30 dark:opacity-20">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-orange-500/15 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/10 rounded-full blur-[100px]"></div>
+      </div>
+      <div className="container mx-auto px-4 md:px-8 lg:px-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-3 md:space-y-4">
             {/* Name with fade-in and slide-up animation */}
@@ -168,35 +174,11 @@ const Hero = () => {
           {/* Image with parallax, zoom, and rotation */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative" ref={imageRef}>
-              {/* Orange neon blurry background layers */}
-              <div className="absolute inset-0 -z-10 flex items-center justify-center">
-                <div 
-                  className="absolute w-80 h-80 md:w-96 md:h-96 rounded-full blur-3xl opacity-60"
-                  style={{
-                    background: "radial-gradient(circle, rgba(234, 88, 12, 0.8) 0%, rgba(234, 88, 12, 0.4) 50%, transparent 100%)",
-                    transform: `translate(${mousePosition.x * 0.05}px, ${mousePosition.y * 0.05}px)`,
-                  }}
-                ></div>
-                <div 
-                  className="absolute w-96 h-96 md:w-[28rem] md:h-[28rem] rounded-full blur-[60px] opacity-40"
-                  style={{
-                    background: "radial-gradient(circle, rgba(234, 88, 12, 0.6) 0%, rgba(251, 146, 60, 0.3) 40%, transparent 70%)",
-                    transform: `translate(${mousePosition.x * 0.03}px, ${mousePosition.y * 0.03}px)`,
-                  }}
-                ></div>
-                <div 
-                  className="absolute w-[24rem] h-[24rem] md:w-[32rem] md:h-[32rem] rounded-full blur-[80px] opacity-30"
-                  style={{
-                    background: "radial-gradient(circle, rgba(251, 146, 60, 0.5) 0%, rgba(234, 88, 12, 0.2) 50%, transparent 80%)",
-                  }}
-                ></div>
-              </div>
               <div
-                className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl ring-8 ring-accent animate-image-zoom-in relative z-10"
+                className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl ring-8 ring-accent animate-image-zoom-in"
                 style={{
                   transform: `translate(${mousePosition.x * 0.1}px, ${mousePosition.y * 0.1}px) rotate(${-mousePosition.x * 0.05}deg)`,
                   transition: "transform 0.1s ease-out",
-                  boxShadow: "0 0 40px rgba(234, 88, 12, 0.4), 0 0 80px rgba(234, 88, 12, 0.2)",
                 }}
               >
                 <img
@@ -205,6 +187,7 @@ const Hero = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
+              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary rounded-full -z-10 blur-2xl opacity-50"></div>
             </div>
           </div>
         </div>
