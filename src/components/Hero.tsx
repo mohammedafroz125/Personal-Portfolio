@@ -32,10 +32,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="min-h-screen flex items-center pt-24 md:pt-28 overflow-hidden">
+    <section id="hero" className="min-h-screen flex items-center justify-center pt-16 md:pt-20 pb-12 overflow-hidden">
       <div className="container mx-auto px-4 md:px-8 lg:px-20">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-4">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="space-y-3 md:space-y-4">
             {/* Name with letter-by-letter animation */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
               {name.split(" ").map((word, wordIndex) => (
