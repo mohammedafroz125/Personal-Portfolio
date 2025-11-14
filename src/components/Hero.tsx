@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Phone, ExternalLink } from "lucide-react";
-import profileImage from "@/assets/profile-placeholder.jpg";
 import { Link } from "react-scroll";
 import { useState, useEffect, useRef } from "react";
+
+// Update this path to your new profile image
+// Option 1: Use a local file - import it like: import profileImage from "@/assets/your-image.jpg";
+// Option 2: Use a URL - set it directly: const profileImage = "https://your-image-url.com/image.jpg";
+import profileImage from "@/assets/profile-placeholder.jpg";
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
