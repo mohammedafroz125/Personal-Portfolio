@@ -53,6 +53,11 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --section-1-bg: 36 30% 96%;
+    --section-2-bg: 36 30% 96%;
+    --section-3-bg: 36 30% 96%;
+    --card-tint-bg: 20 20% 98%;
   }
 
   .dark {
@@ -91,6 +96,11 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --section-1-bg: 217 33% 12%;
+    --section-2-bg: 220 15% 14%;
+    --section-3-bg: 230 20% 10%;
+    --card-tint-bg: 220 14% 15%;
   }
 }
 
@@ -138,5 +148,19 @@ All colors MUST be HSL.
   #hero button:hover {
     box-shadow: 0 0 20px rgba(234, 88, 12, 0.6), 0 0 40px rgba(234, 88, 12, 0.3);
     transform: translateY(-2px);
+  }
+
+  .bg-section-1 {
+    background-color: hsl(var(--section-1-bg));
+  }
+  .bg-section-2 {
+    background-color: hsl(var(--section-2-bg));
+  }
+  .bg-section-3 {
+    background-color: hsl(var(--section-3-bg));
+  }
+
+  .tint-card {
+    background-color: hsl(var(--card-tint-bg));
   }
 }

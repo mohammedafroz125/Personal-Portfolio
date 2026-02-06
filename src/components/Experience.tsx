@@ -31,16 +31,18 @@ const Experience = () => {
   const timeline = [
     {
       type: "work",
-      title: "Software Developer Intern",
+      title: "Junior Web Developer Intern",
       organization: "Ranazonai Technologies",
       location: "Remote",
       period: "Recent",
       description:
-        "Designed and developed dynamic, responsive web pages using HTML, CSS, and JavaScript. Collaborated with developers and designers to implement clean, structured code.",
+        "Contributed to responsive frontend development and production deployments with a focus on usability and performance.",
       highlights: [
-        "Improved website layout, performance, and user experience",
-        "Implemented responsive design principles",
-        "Collaborated in an agile development environment",
+        "Responsive website development using HTML, CSS, JavaScript, React, TypeScript",
+        "UI/UX improvements for better readability and navigation",
+        "Frontend performance optimization (layout, assets, responsiveness)",
+        "Deployment using Hostinger VPS with domain & DNS setup",
+        "Version control with Git & GitHub for collaborative workflows",
       ],
     },
     {
@@ -50,7 +52,7 @@ const Experience = () => {
       location: "Pursuing",
       period: "Expected 2026",
       description:
-        "Currently pursuing advanced studies in computer applications with focus on software development and modern technologies.",
+        "Currently pursuing advanced studies in computer applications with focus on web development and modern technologies.",
       highlights: [],
     },
     {
@@ -80,7 +82,7 @@ const Experience = () => {
       location: "Completed",
       period: "2024",
       description:
-        "Completed undergraduate studies in Computer Science with strong foundation in programming and software development.",
+        "Completed undergraduate studies in Computer Science with strong foundation in programming and web development.",
       highlights: [],
     },
   ];
@@ -95,7 +97,7 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" ref={sectionRef} className="py-20">
+    <section id="experience" ref={sectionRef} className="py-20 bg-section-3">
       <div className="container mx-auto px-6">
         <div
           className={`transition-all duration-1000 ${
@@ -106,7 +108,7 @@ const Experience = () => {
             Experience & Education
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            My professional journey and academic background in software development and analytics.
+            My professional journey and academic background in web development and analytics.
           </p>
 
           <div className="max-w-4xl mx-auto relative">
@@ -122,7 +124,7 @@ const Experience = () => {
                       </div>
                     </div>
 
-                    <Card className="p-6 hover:shadow-lg transition-shadow">
+                    <Card className="p-6 hover:shadow-lg transition-shadow tint-card">
                       <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                         <div>
                           <h3 className="text-xl font-bold mb-1">{item.title}</h3>

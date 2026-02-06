@@ -28,27 +28,25 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: "Languages",
-      skills: ["HTML", "CSS", "JavaScript", "Python", "SQL"],
-    },
-    // {
-    //   title: "Frameworks & Libraries",
-    //   skills: ["React.js", "Node.js", "Express.js", "Tailwind CSS"],
-    //   // "Node.js", "Express.js", "Tailwind CSS"
-    // },
-    {
-      title: "Databases & Tools",
-      skills: ["SQL Server","MongoDB"],
-      // "MongoDB", "PostgreSQL"
+      title: "Frontend Technologies",
+      skills: ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Tailwind CSS"],
     },
     {
-      title: "Analytics & Design",
-      skills: ["Power BI", "Excel", "AI Design Tools", "Data Visualization"],
+      title: "Deployment & Hosting",
+      skills: ["Hostinger VPS", "Domain & DNS", "Vite (Build Tool)", "Git & GitHub"],
+    },
+    {
+      title: "Databases & Data Analytics",
+      skills: ["SQL Server", "Power BI", "Excel"],
+    },
+    {
+      title: "AI-Assisted Development",
+      skills: ["AI Design Tools"],
     },
   ];
 
   return (
-    <section id="skills" ref={sectionRef} className="py-20">
+    <section id="skills" ref={sectionRef} className="py-20 bg-section-2">
       <div className="container mx-auto px-6 w-full ">
         <div
           className={`transition-all duration-1000 ${
@@ -66,7 +64,7 @@ const Skills = () => {
             {skillCategories.map((category, index) => (
               <Card
                 key={index}
-                className="p-6 hover:shadow-lg transition-shadow"
+                className="p-6 hover:shadow-lg transition-shadow tint-card"
               >
                 <h3 className="text-xl font-bold mb-4 text-center">
                   {category.title}

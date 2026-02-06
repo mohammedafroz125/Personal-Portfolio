@@ -13,7 +13,7 @@ const Hero = () => {
   const imageRef = useRef<HTMLDivElement>(null);
   const name = "Mohammed Afroz";
   const titles = [
-    "Software Developer",
+    "Junior Web Developer",
     "MCA Student",
     "Web Development Enthusiast"
   ];
@@ -32,7 +32,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center pt-16 md:pt-20 pb-12 overflow-hidden relative bg-[#f7f5f3] dark:bg-[#1a1815]">
+    <section id="hero" className="min-h-screen flex items-center justify-center pt-16 md:pt-20 pb-12 overflow-hidden relative bg-section-1">
       <div className="container mx-auto px-4 md:px-8 lg:px-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-3 md:space-y-4">
@@ -71,9 +71,9 @@ const Hero = () => {
                 animationDelay: "2s",
               }}
             >
-              Passionate about creating dynamic, responsive web applications. 
-              Currently pursuing Master of Computer Applications with hands-on 
-              experience in full-stack development and data analytics.
+              Junior web developer focused on modern, responsive interfaces and clean, accessible frontend code.
+              Experienced with React, TypeScript, and real-world deployments.
+              MCA student working on live, production projects and practical data insights.
             </p>
 
             {/* Buttons */}
@@ -97,11 +97,26 @@ const Hero = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-orange-500 bg-transparent hover:bg-orange-500/10 hover:border-[#ea580c] hover:scale-105 transition-all duration-300 hover:shadow-[0_0_20px_rgba(234,88,12,0.6)] hover:shadow-orange-600/50"
+                  className="gap-2 border-2 border-orange-500 bg-transparent hover:bg-orange-500/10 text-foreground transition-all duration-300 hover:shadow-[0_0_20px_rgba(234,88,12,0.6)] hover:shadow-orange-600/50"
                 >
                   Get In Touch
                 </Button>
               </Link>
+              <a
+                href="/Mohammed_Afroz_Junior_Web_Developer.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download Resume PDF"
+              >
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="gap-2 border-2 border-orange-500 bg-transparent hover:bg-orange-500/10 text-foreground transition-all duration-300 hover:shadow-[0_0_20px_rgba(234,88,12,0.6)] hover:shadow-orange-600/50"
+                >
+                  Download Resume
+                  <ExternalLink className="w-4 h-4" />
+                </Button>
+              </a>
             </div>
 
             {/* Social icons and contact info with staggered slide-up */}
