@@ -45,7 +45,7 @@ const Projects = () => {
       title: "StyledByNazima",
       description: "Fashion brand landing page with modern layout and typography.",
       technologies: ["HTML", "CSS", "Responsive Design", "Web Design", "Tailwind CSS"],
-      url: "/projects/styledbynazima",
+      url: "https://nazima-brand-elevation.vercel.app/",
       external: false,
       image: nazimaImage,
     },
