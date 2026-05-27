@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Briefcase, GraduationCap } from "lucide-react";
+import { Briefcase, GraduationCap, Download } from "lucide-react";
 
 const Experience = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -64,16 +64,18 @@ const Experience = () => {
       description:
         "Gained practical knowledge of front-end & back-end web development using modern technologies.",
       highlights: [],
+      pdf: "/Full Stack Certificate.pdf",
     },
     {
       type: "certification",
-      title: "Data Analytics (Pursuing)",
+      title: "Data Analytics",
       organization: "Shivasoft Tech Pvt. Ltd.",
-      location: "Ongoing",
-      period: "Current",
+      location: "Completed",
+      period: "Jul 2025 - Jan 2026",
       description:
         "Learning Python, Power BI, SQL Server, Excel, and AI design tools for real-world data insights.",
       highlights: [],
+      pdf: "/Data Analytics Certificate.pdf",
     },
     {
       type: "education",
@@ -132,9 +134,22 @@ const Experience = () => {
                             {item.organization} • {item.location}
                           </p>
                         </div>
-                        <Badge className="bg-primary/10 text-primary hover:bg-primary/20">
-                          {item.period}
-                        </Badge>
+                        <div className="flex items-center gap-2">
+                          {item.pdf && (
+                            <a
+                              href={item.pdf}
+                              download
+                              className="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+                              title={`Download ${item.title} certificate`}
+                            >
+                              <Download className="w-4 h-4" />
+                              Certificate
+                            </a>
+                          )}
+                          <Badge className="bg-primary/10 text-primary hover:bg-primary/20">
+                            {item.period}
+                          </Badge>
+                        </div>
                       </div>
 
                       <p className="text-muted-foreground mb-4">{item.description}</p>
