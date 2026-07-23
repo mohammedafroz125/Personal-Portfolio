@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import matchaImage from "@/assets/Matcha_Mixologist.png";
 import nazimaImage from "@/assets/Styledbynazima.png";
 import placeholderImage from "@/assets/Filemyrti.png";
+import rtiPdfManagerImage from "@/assets/rti-pdf-manager.jpg";
 
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -57,6 +58,28 @@ const Projects = () => {
       external: true,
       image: placeholderImage,
     },
+    {
+      title: "RTI PDF Manager",
+      description: "A production-ready RTI PDF management system that streamlines RTI document processing with advanced PDF editing, project management, QR-based mobile uploads, offline support, and optimized PDF generation for faster workflows.",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Supabase",
+        "IndexedDB",
+        "Node.js",
+        "Express",
+        "PDF-lib",
+        "Ghostscript",
+        "qpdf",
+        "Vercel",
+      ],
+      url: "https://pdffilemyrti.vercel.app/",
+      external: true,
+      image: rtiPdfManagerImage,
+      category: "Full Stack Web Application",
+    },
   ];
 
   return (
@@ -78,7 +101,7 @@ const Projects = () => {
             A showcase of my work in web development, demonstrating clean code and user-focused design.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 auto-rows-fr gap-6 max-w-7xl mx-auto">
             {projects.map((project, projectIndex) => (
               <Card
                 key={projectIndex}
@@ -99,7 +122,7 @@ const Projects = () => {
                       <p className="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
                     </div>
 
-                    <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                    <div className="flex items-center gap-3 text-xs text-muted-foreground flex-wrap">
                       {project.external ? (
                         <>
                           <span className="flex items-center gap-1">
@@ -112,7 +135,7 @@ const Projects = () => {
                           </span>
                           <span className="flex items-center gap-1">
                             <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary"></span>
-                            Web App
+                            {project.category || "Web App"}
                           </span>
                         </>
                       ) : (
@@ -123,7 +146,7 @@ const Projects = () => {
                           </span>
                           <span className="flex items-center gap-1">
                             <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary"></span>
-                            Web App
+                            {project.category || "Web App"}
                           </span>
                         </>
                       )}
