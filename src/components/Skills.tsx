@@ -28,20 +28,28 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: "Frontend Technologies",
-      skills: ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Tailwind CSS"],
+      title: "Programming Languages",
+      skills: ["JavaScript", "TypeScript", "Python (Basic)", "SQL"],
     },
     {
-      title: "Deployment & Hosting",
-      skills: ["Hostinger VPS", "Domain & DNS", "Vite (Build Tool)", "Git & GitHub"],
+      title: "Frontend Development",
+      skills: ["HTML5", "CSS3", "React.js", "Next.js", "Tailwind CSS", "Shadcn UI", "Responsive Web Design", "UI/UX Development"],
     },
     {
-      title: "Databases & Data Analytics",
-      skills: ["SQL Server", "Power BI", "Excel"],
+      title: "Backend Development",
+      skills: ["Node.js", "Express.js", "REST APIs", "CRUD Operations", "Authentication & Authorization", "Frontend-Backend Integration"],
     },
     {
-      title: "AI-Assisted Development",
-      skills: ["AI Design Tools"],
+      title: "Databases & Deployment",
+      skills: ["MongoDB", "MySQL", "Supabase", "Hostinger VPS", "Vercel", "Nginx", "SSL Certificates", "DNS Configuration"],
+    },
+    {
+      title: "Tools & Additional Skills",
+      skills: ["Git", "GitHub", "VS Code", "npm", "Vite", "Debugging", "Technical Troubleshooting", "AI-Assisted Development", "SEO Basics"],
+    },
+    {
+      title: "Productivity",
+      skills: ["Microsoft Excel", "Microsoft Word", "Microsoft PowerPoint", "Data Entry", "Data Management", "Basic Data Analysis"],
     },
   ];
 

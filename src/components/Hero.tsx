@@ -13,9 +13,9 @@ const Hero = () => {
   const imageRef = useRef<HTMLDivElement>(null);
   const name = "Mohammed Afroz";
   const titles = [
-    "Junior Web Developer",
-    "MCA Student",
-    "Web Development Enthusiast"
+    "Software Engineer",
+    "Full Stack Developer",
+    "Web Application Developer"
   ];
 
   // Handle mouse move for parallax effect
@@ -71,9 +71,8 @@ const Hero = () => {
                 animationDelay: "2s",
               }}
             >
-              Junior web developer focused on modern, responsive interfaces and clean, accessible frontend code.
-              Experienced with React, TypeScript, and real-world deployments.
-              MCA student working on live, production projects and practical data insights.
+              Software Engineer focused on reliable, responsive web applications and clean, user-friendly experiences.
+              Experienced across React, TypeScript, Node.js, Express, databases, and production deployments.
             </p>
 
             {/* Buttons */}
@@ -103,7 +102,7 @@ const Hero = () => {
                 </Button>
               </Link>
               <a
-                href="/Mohammed_Afroz_Junior_Web_Developer.pdf"
+                href="/Mohammed_Afroz_Software_Engineer.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Download Resume PDF"
@@ -143,7 +142,7 @@ const Hero = () => {
               >
                 <Linkedin className="w-5 h-5" />
                 <a
-                  href="https://www.linkedin.com/in/mohammed-afroz-7a27b0245/"
+                  href="https://www.linkedin.com/in/mohammedafroz125"
                   className="text-sm break-all hover:text-foreground transition-colors"
                 >
                   linkedin.com/in/mohammedafroz

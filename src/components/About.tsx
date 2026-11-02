@@ -26,9 +26,9 @@ const About = () => {
   }, []);
 
   const stats = [
-    { value: "Live Projects", label: "Production-ready web applications deployed publicly" },
-    { value: "Hands-on Experience", label: "Frontend development, deployment, and real-world use cases" },
-    { value: "Multiple Technologies", label: "Modern tools across web development and data analytics" },
+    { value: "Live Projects", label: "Web applications deployed and accessible online." },
+    { value: "Practical Experience", label: "Frontend development, backend integration, and deployment." },
+    { value: "Technology Skills", label: "Modern tools and technologies across web development." },
   ];
 
   return (
@@ -49,20 +49,20 @@ const About = () => {
 
           <div className="max-w-4xl mx-auto space-y-6 text-center">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a <span className="font-semibold text-foreground">Junior Web Developer</span> pursuing my Master of Computer Applications.
-              I specialize in building clean, responsive user interfaces and deploying production-ready websites with a focus on scalability and performance.
+              I'm a <span className="font-semibold text-foreground">Software Engineer</span> building reliable, responsive web applications.
+              I work across frontend and backend development, with a focus on user-friendly experiences, maintainable code, and production readiness.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Core technologies: <span className="font-semibold text-foreground">HTML, CSS, JavaScript, React, TypeScript</span>, with basic database management using <span className="font-semibold text-foreground">SQL Server</span>.
-              I also work with modern tooling for deployments and version control to ensure reliable releases.
+              My toolkit includes <span className="font-semibold text-foreground">React, JavaScript, TypeScript, Node.js, Express, REST APIs, and SQL</span>,
+              supported by MongoDB, Supabase, Git, and VPS deployment workflows.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Currently pursuing a Data Analytics certification covering <span className="font-semibold text-foreground">Python, Power BI, and Excel</span>,
-              and leveraging <span className="font-semibold text-foreground">AI-assisted design tools</span> to speed up ideation and UI polish—without over-claiming full automation.
+              I bring practical experience with responsive UI/UX development, authentication, CRUD operations, technical troubleshooting,
+              SEO basics, and AI-assisted development.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              As a <span className="font-semibold text-foreground">Junior Web Developer Intern at Ranazonai Technologies</span>,
-              I focused on responsive layouts, UI/UX improvements, and frontend performance—shipping updates that improved usability and load times.
+              At <span className="font-semibold text-foreground">Ranazonai Technologies</span>, I contribute to company and client web projects,
+              including frontend development, backend integration, enhancements, competitor research, and production deployments.
             </p>
           </div>
 

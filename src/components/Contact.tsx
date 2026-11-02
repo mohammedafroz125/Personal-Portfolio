@@ -105,7 +105,7 @@ const Contact = () => {
                   <Github className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/mohammed-afroz-7a27b0245/"
+                  href="https://www.linkedin.com/in/mohammedafroz125"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-14 h-14 rounded-full bg-foreground text-background flex items-center justify-center hover:bg-foreground/90 transition-colors"
@@ -125,7 +125,7 @@ const Contact = () => {
                   </Button>
                   <Button size="lg" variant="outline" asChild>
                     <a
-                      href="https://www.linkedin.com/in/mohammed-afroz-7a27b0245/"
+                      href="https://www.linkedin.com/in/mohammedafroz125"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

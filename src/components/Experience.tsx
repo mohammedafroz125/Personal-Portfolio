@@ -31,28 +31,28 @@ const Experience = () => {
   const timeline = [
     {
       type: "work",
-      title: "Junior Web Developer Intern",
+      title: "Web Developer",
       organization: "Ranazonai Technologies",
-      location: "Remote",
-      period: "Recent",
+      location: "Hyderabad",
+      period: "Oct 2025 - Present",
       description:
-        "Contributed to responsive frontend development and production deployments with a focus on usability and performance.",
+        "Contribute to the development and maintenance of company and client web projects, with a focus on functionality, user experience, and reliable production delivery.",
       highlights: [
-        "Responsive website development using HTML, CSS, JavaScript, React, TypeScript",
-        "UI/UX improvements for better readability and navigation",
-        "Frontend performance optimization (layout, assets, responsiveness)",
-        "Deployment using Hostinger VPS with domain & DNS setup",
-        "Version control with Git & GitHub for collaborative workflows",
+        "Frontend development and responsive UI/UX improvements",
+        "Backend integration and website enhancements",
+        "Production deployment through Hostinger VPS",
+        "Domain and DNS configuration, debugging, and technical troubleshooting",
+        "Competitor research to improve functionality and user experience",
       ],
     },
     {
       type: "education",
       title: "Master of Computer Applications (MCA)",
       organization: "MESCO Institute of Management and Computer Science",
-      location: "Pursuing",
-      period: "Expected 2026",
+      location: "Hyderabad",
+      period: "Oct 2026",
       description:
-        "Currently pursuing advanced studies in computer applications with focus on web development and modern technologies.",
+        "Master's degree in Computer Applications.",
       highlights: [],
     },
     {
@@ -73,18 +73,18 @@ const Experience = () => {
       location: "Completed",
       period: "Jul 2025 - Jan 2026",
       description:
-        "Learning Python, Power BI, SQL Server, Excel, and AI design tools for real-world data insights.",
+        "Completed a data analytics certification.",
       highlights: [],
       pdf: "/Data Analytics Certificate.pdf",
     },
     {
       type: "education",
-      title: "B.Sc (Computer Science)",
+      title: "B.Sc - Statistics",
       organization: "Jagruti Degree & PG College",
-      location: "Completed",
-      period: "2024",
+      location: "Hyderabad",
+      period: "Jul 2024",
       description:
-        "Completed undergraduate studies in Computer Science with strong foundation in programming and web development.",
+        "Bachelor's degree in Statistics. GPA: 7.6.",
       highlights: [],
     },
   ];

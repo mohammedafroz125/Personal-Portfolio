@@ -1,6 +1,6 @@
-# Mohammed Afroz – Personal Portfolio
+# Mohammed Afroz – Software Engineer Portfolio
 
-A modern and responsive personal portfolio website showcasing my work, projects, and technical skills as a Frontend Developer.
+A modern and responsive personal portfolio website showcasing my work, projects, and technical skills as a Software Engineer.
 
 ## Live Website
 
@@ -53,9 +53,9 @@ The website is deployed using **Vercel**.
 
 If you'd like to connect or collaborate:
 
-* Email: [mohammedafroz@gmail.com](mailto:mohammedafroz@gmail.com)
-* LinkedIn: https://linkedin.com/
-* GitHub: https://github.com/
+* Email: [mohammedafroz45654@gmail.com](mailto:mohammedafroz45654@gmail.com)
+* LinkedIn: https://www.linkedin.com/in/mohammedafroz125
+* GitHub: https://github.com/mohammedafroz125
 
 ---
 
