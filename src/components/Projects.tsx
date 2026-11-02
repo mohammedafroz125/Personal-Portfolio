@@ -4,11 +4,12 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, ChevronLeft, ChevronRight, Github } from "lucide-react";
 import { Link } from "react-router-dom";
-import matchaImage from "@/assets/Matcha_Mixologist.png";
-import nazimaImage from "@/assets/Styledbynazima.png";
-import placeholderImage from "@/assets/Filemyrti.png";
-import rtiPdfManagerImage from "@/assets/rti-pdf-manager.jpg";
-import shreeBalajiImage from "@/assets/shree-balaji-hub.png";
+import matchaImage from "@/assets/Matcha_Mixologist.webp";
+import nazimaImage from "@/assets/Styledbynazima.webp";
+import placeholderImage from "@/assets/Filemyrti.webp";
+import rtiPdfManagerImage from "@/assets/rti-pdf-manager.webp";
+import shreeBalajiImage from "@/assets/shree-balaji-hub.webp";
+import queensBeautyImage from "@/assets/Queen’s Beauty Parlour Showcase.png";
 
 interface Project {
   title: string;
@@ -108,6 +109,16 @@ const projects: Project[] = [
     image: nazimaImage,
     statusTags: ["Frontend", "Web App"],
   },
+  {
+    title: "Queen’s Beauty Parlour",
+    description:
+      "Elegant at-home beauty service website featuring service discovery, bridal and hair care offerings, inspiration galleries, and WhatsApp booking enquiries for customers in Borananda, Hyderabad.",
+    technologies: ["React", "Tailwind CSS", "Responsive Design", "WhatsApp Integration"],
+    url: "https://queensbeauty.vercel.app/",
+    external: true,
+    image: queensBeautyImage,
+    statusTags: ["Live Project", "Production", "Web App"],
+  },
 ];
 
 const Projects = () => {
@@ -156,7 +167,7 @@ const Projects = () => {
     <section
       id="projects"
       ref={sectionRef}
-      className="min-h-screen md:h-screen md:max-h-screen py-4 md:py-8 flex flex-col justify-between overflow-hidden relative select-none bg-background/50 backdrop-blur-sm"
+      className="min-h-screen md:h-screen md:max-h-screen py-4 md:py-8 flex flex-col justify-between overflow-hidden relative select-none bg-background/50"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -189,7 +200,6 @@ const Projects = () => {
             let rotateY = 0;
             let opacity = 1;
             let zIndex = 30;
-            let filterBlur = "blur(0px)";
 
             if (isLeft) {
               translateX = "-65%";
@@ -197,21 +207,18 @@ const Projects = () => {
               rotateY = 15;
               opacity = 0.65;
               zIndex = 20;
-              filterBlur = "blur(1px)";
             } else if (isRight) {
               translateX = "65%";
               scale = 0.85;
               rotateY = -15;
               opacity = 0.65;
               zIndex = 20;
-              filterBlur = "blur(1px)";
             } else if (!isCenter) {
               translateX = offset < 0 ? "-130%" : "130%";
               scale = 0.7;
               rotateY = offset < 0 ? 30 : -30;
               opacity = 0;
               zIndex = 10;
-              filterBlur = "blur(4px)";
             }
 
             const statusTags =
@@ -229,13 +236,11 @@ const Projects = () => {
                   scale: scale,
                   rotateY: rotateY,
                   opacity: opacity,
-                  filter: filterBlur,
                 }}
                 transition={{
-                  type: "spring",
-                  mass: 0.8,
-                  stiffness: 150,
-                  damping: 22,
+                  type: "tween",
+                  duration: 0.35,
+                  ease: "easeOut",
                 }}
                 onClick={() => {
                   if (isLeft) handlePrev();
@@ -254,18 +259,24 @@ const Projects = () => {
                   backfaceVisibility: "hidden",
                   pointerEvents: isVisible ? "auto" : "none",
                 }}
-                className={`absolute top-0 w-[88vw] sm:w-[410px] lg:w-[440px] h-[440px] sm:h-[465px] cursor-pointer touch-none transform-gpu will-change-transform ${
+                className={`absolute top-0 w-[88vw] sm:w-[410px] lg:w-[440px] h-[440px] sm:h-[465px] cursor-pointer touch-none transform-gpu ${
                   !isCenter ? "hover:opacity-85 transition-opacity" : ""
                 }`}
               >
-                <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 h-full group tint-card flex flex-col border border-border/80 bg-card/95 backdrop-blur-md">
+                <Card className="overflow-hidden hover:shadow-2xl transition-shadow duration-300 h-full group tint-card flex flex-col border border-border/80 bg-card/95">
                   {/* 1. Project Preview Image */}
                   <div className="aspect-video w-full overflow-hidden shrink-0 relative">
-                    <img
-                      src={project.image}
-                      alt={`${project.title} preview`}
-                      className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
-                    />
+                    {isVisible ? (
+                      <img
+                        src={project.image}
+                        alt={`${project.title} preview`}
+                        loading="eager"
+                        decoding="async"
+                        className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div aria-hidden="true" className="w-full h-full bg-muted" />
+                    )}
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60" />
                   </div>
 
@@ -356,7 +367,7 @@ const Projects = () => {
         <button
           onClick={handlePrev}
           aria-label="Previous project"
-          className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-40 p-3 rounded-full bg-background/80 hover:bg-background border border-border text-foreground shadow-lg backdrop-blur-md transition-all hover:scale-110 active:scale-95"
+          className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-40 p-3 rounded-full bg-background/90 hover:bg-background border border-border text-foreground shadow-lg transition-all hover:scale-110 active:scale-95"
         >
           <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
         </button>
@@ -364,7 +375,7 @@ const Projects = () => {
         <button
           onClick={handleNext}
           aria-label="Next project"
-          className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-40 p-3 rounded-full bg-background/80 hover:bg-background border border-border text-foreground shadow-lg backdrop-blur-md transition-all hover:scale-110 active:scale-95"
+          className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-40 p-3 rounded-full bg-background/90 hover:bg-background border border-border text-foreground shadow-lg transition-all hover:scale-110 active:scale-95"
         >
           <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
         </button>
