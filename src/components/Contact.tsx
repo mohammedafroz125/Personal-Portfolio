@@ -55,7 +55,7 @@ const Contact = () => {
       ref={sectionRef}
       className="py-20 bg-accent/30"
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div
           className={`transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -69,7 +69,7 @@ const Contact = () => {
           </p>
 
           <div className="max-w-4xl mx-auto space-y-8">
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid gap-4 md:grid-cols-3 md:gap-6">
               {contactInfo.map((info, index) => (
                 <Card
                   key={index}
@@ -93,7 +93,7 @@ const Contact = () => {
               ))}
             </div>
 
-            <Card className="p-8 text-center">
+            <Card className="p-5 text-center sm:p-8">
               <h3 className="text-2xl font-bold mb-4">Connect With Me</h3>
               <div className="flex justify-center gap-4 mb-6">
                 <a
@@ -119,9 +119,9 @@ const Contact = () => {
                 <p className="text-muted-foreground mb-6">
                   Whether you have a specific project in mind or just want to discuss possibilities, I'd love to hear from you.
                 </p>
-                <div className="flex flex-wrap justify-center gap-4">
+                <div className="flex flex-col justify-center gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
                   <Button size="lg" asChild>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mohammedafroz45654@gmail.com">Send Email</a>
+                    <a href="mailto:mohammedafroz45654@gmail.com">Send Email</a>
                   </Button>
                   <Button size="lg" variant="outline" asChild>
                     <a

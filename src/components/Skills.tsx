@@ -29,33 +29,62 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: ["JavaScript", "TypeScript", "Python (Basic)", "SQL"],
+      skills: ["Python", "JavaScript", "HTML5", "CSS3", "SQL", "TypeScript"],
     },
     {
-      title: "Frontend Development",
-      skills: ["HTML5", "CSS3", "React.js", "Next.js", "Tailwind CSS", "Shadcn UI", "Responsive Web Design", "UI/UX Development"],
+      title: "Frameworks & Web Development",
+      skills: [
+        "Flask",
+        "Full-Stack Development",
+        "REST APIs",
+        "Web Scraping",
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "Responsive Web Design",
+      ],
     },
     {
-      title: "Backend Development",
-      skills: ["Node.js", "Express.js", "REST APIs", "CRUD Operations", "Authentication & Authorization", "Frontend-Backend Integration"],
+      title: "Data Analytics & Tools",
+      skills: [
+        "Data Analytics",
+        "Data Extraction",
+        "Relational Databases",
+        "MongoDB",
+        "MySQL",
+        "Supabase",
+        "SQL Queries",
+      ],
     },
     {
-      title: "Databases & Deployment",
-      skills: ["MongoDB", "MySQL", "Supabase", "Hostinger VPS", "Vercel", "Nginx", "SSL Certificates", "DNS Configuration"],
+      title: "Developer Tools & Version Control",
+      skills: [
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Linux/Terminal basics",
+        "npm",
+        "Vite",
+        "Debugging",
+        "Technical Troubleshooting",
+      ],
     },
     {
-      title: "Tools & Additional Skills",
-      skills: ["Git", "GitHub", "VS Code", "npm", "Vite", "Debugging", "Technical Troubleshooting", "AI-Assisted Development", "SEO Basics"],
-    },
-    {
-      title: "Productivity",
-      skills: ["Microsoft Excel", "Microsoft Word", "Microsoft PowerPoint", "Data Entry", "Data Management", "Basic Data Analysis"],
+      title: "Deployment, Security & AI Tools",
+      skills: [
+        "Hostinger VPS",
+        "Vercel",
+        "SSL Certificates",
+        "Authentication & Authorization",
+        "AI-Assisted Development",
+        "SEO Basics",
+      ],
     },
   ];
 
   return (
     <section id="skills" ref={sectionRef} className="py-20 bg-section-2">
-      <div className="container mx-auto px-6 w-full ">
+      <div className="container mx-auto w-full px-4 sm:px-6">
         <div
           className={`transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -68,20 +97,20 @@ const Skills = () => {
             A comprehensive toolkit of modern technologies and methodologies that I use to build scalable, efficient solutions.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-6 max-w-7xl mx-auto">
             {skillCategories.map((category, index) => (
               <Card
                 key={index}
-                className="p-6 hover:shadow-lg transition-shadow tint-card"
+                className="p-5 sm:p-6 hover:shadow-lg transition-shadow tint-card"
               >
                 <h3 className="text-xl font-bold mb-4 text-center">
                   {category.title}
                 </h3>
-                <div className="space-y-3">
+                <div className="flex flex-wrap justify-center gap-2">
                   {category.skills.map((skill, skillIndex) => (
                     <div
                       key={skillIndex}
-                      className="text-center py-2 px-4 bg-accent rounded-md text-sm font-medium"
+                      className="py-2 px-3 bg-accent rounded-md text-sm font-medium"
                     >
                       {skill}
                     </div>

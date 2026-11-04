@@ -12,12 +12,6 @@ const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const imageRef = useRef<HTMLDivElement>(null);
   const name = "Mohammed Afroz";
-  const titles = [
-    "Software Engineer",
-    "Full Stack Developer",
-    "Web Application Developer"
-  ];
-
   // Handle mouse move for parallax effect
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -37,31 +31,22 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-3 md:space-y-4">
             {/* Name with fade-in and slide-up animation */}
-            <h1 
+            <h1
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight animate-fade-in-up-delayed"
               style={{
                 animationDelay: "0.3s",
               }}
             >
-              {name}
+              {name}: Software Engineer
             </h1>
 
-            {/* Titles with staggered fade-in and slide-up */}
-            <p className="text-xl md:text-2xl text-muted-foreground flex flex-wrap gap-2">
-              {titles.map((title, index) => (
-                <span
-                  key={index}
-                  className="inline-block animate-fade-in-up-delayed"
-                  style={{
-                    animationDelay: `${1.2 + index * 0.2}s`,
-                  }}
-                >
-                  {title}
-                  {index < titles.length - 1 && (
-                    <span className="mx-2">|</span>
-                  )}
-                </span>
-              ))}
+            <p
+              className="text-xl md:text-2xl text-muted-foreground animate-fade-in-up-delayed"
+              style={{
+                animationDelay: "1.2s",
+              }}
+            >
+              Full-Stack Developer specializing in Python, Flask, and modern web application development.
             </p>
 
             {/* Tagline with graceful fade-in */}
@@ -71,13 +56,12 @@ const Hero = () => {
                 animationDelay: "2s",
               }}
             >
-              Software Engineer focused on reliable, responsive web applications and clean, user-friendly experiences.
-              Experienced across React, TypeScript, Node.js, Express, databases, and production deployments.
+              I build reliable, responsive web applications and clean, user-friendly experiences with Python, Flask, modern JavaScript, and production-ready web technologies.
             </p>
 
             {/* Buttons */}
             <div
-              className="flex flex-wrap gap-4 pt-4 animate-fade-in-up-delayed"
+              className="flex flex-col sm:flex-row sm:flex-wrap gap-4 pt-4 animate-fade-in-up-delayed"
               style={{
                 animationDelay: "2.5s",
               }}
@@ -86,7 +70,7 @@ const Hero = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="gap-2 border-2 border-orange-500 bg-transparent hover:bg-orange-500/10 text-foreground transition-all duration-300 hover:shadow-[0_0_20px_rgba(234,88,12,0.6)] hover:shadow-orange-600/50"
+                  className="w-full sm:w-auto gap-2 border-2 border-orange-500 bg-transparent hover:bg-orange-500/10 text-foreground transition-all duration-300 hover:shadow-[0_0_20px_rgba(234,88,12,0.6)] hover:shadow-orange-600/50"
                 >
                   View My Work
                   <ExternalLink className="w-4 h-4" />
@@ -96,7 +80,7 @@ const Hero = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="gap-2 border-2 border-orange-500 bg-transparent hover:bg-orange-500/10 text-foreground transition-all duration-300 hover:shadow-[0_0_20px_rgba(234,88,12,0.6)] hover:shadow-orange-600/50"
+                  className="w-full sm:w-auto gap-2 border-2 border-orange-500 bg-transparent hover:bg-orange-500/10 text-foreground transition-all duration-300 hover:shadow-[0_0_20px_rgba(234,88,12,0.6)] hover:shadow-orange-600/50"
                 >
                   Get In Touch
                 </Button>
@@ -110,7 +94,7 @@ const Hero = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="gap-2 border-2 border-orange-500 bg-transparent hover:bg-orange-500/10 text-foreground transition-all duration-300 hover:shadow-[0_0_20px_rgba(234,88,12,0.6)] hover:shadow-orange-600/50"
+                  className="w-full sm:w-auto gap-2 border-2 border-orange-500 bg-transparent hover:bg-orange-500/10 text-foreground transition-all duration-300 hover:shadow-[0_0_20px_rgba(234,88,12,0.6)] hover:shadow-orange-600/50"
                 >
                   Download Resume
                   <ExternalLink className="w-4 h-4" />
@@ -156,7 +140,7 @@ const Hero = () => {
               >
                 <Mail className="w-5 h-5" />
                 <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=mohammedafroz45654@gmail.com"
+                  href="mailto:mohammedafroz45654@gmail.com"
                   className="text-sm break-all hover:text-foreground transition-colors"
                 >
                   mohammedafroz45654@gmail.com
