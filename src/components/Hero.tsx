@@ -102,7 +102,7 @@ const Hero = () => {
                 </Button>
               </Link>
               <a
-                href="/Mohammed_Afroz_Software_Engineer.pdf"
+                href="/Mohammed_Afroz_Software_Engineer_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Download Resume PDF"

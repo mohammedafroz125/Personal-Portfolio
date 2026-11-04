@@ -133,6 +133,18 @@ const Contact = () => {
                     </a>
                   </Button>
                 </div>
+                <p className="mt-4 text-center">
+                  Seeking technical support or operations roles? Access my alternative resume{" "}
+                  <a
+                    href="/Mohammed_Afroz_Operations_Specialist_Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#00786C] hover:underline"
+                  >
+                    here
+                  </a>
+                  .
+                </p>
               </div>
             </Card>
           </div>
